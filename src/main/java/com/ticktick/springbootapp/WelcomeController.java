@@ -16,7 +16,12 @@ public class WelcomeController {
 	@GetMapping("/greet")
 	public String greet(HttpServletRequest req) {
 		String name=req.getParameter("name");
-		req.setAttribute("pname", name);
+		 if(name.length()==0) {
+			 req.setAttribute("pname", "Your name is blank!");
+		 }else {
+			 req.setAttribute("pname", name);	 
+		 }
+		
 		return "success"; //success.jsp
 	}
 

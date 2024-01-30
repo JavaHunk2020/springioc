@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 //new DogService
+//@Controller , @Repository, Component
 @Service
 public class DogService {
 	
